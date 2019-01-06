@@ -11,7 +11,7 @@ export default class BaseLayout extends Component {
   }
 
   render() {
-    const base_layer_styles = {
+    const baseLayerStyles = {
       // "backgroundColor": "#D3D3D3",
       // "backgroundColor": "#EEEEEE",
       // "backgroundColor": "#5D711F",
@@ -23,7 +23,7 @@ export default class BaseLayout extends Component {
     };
 
     return (
-      <div style={base_layer_styles}>
+      <div style={baseLayerStyles}>
         <Header />
         <div className="body">
           {this.props.children}
