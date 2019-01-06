@@ -80,8 +80,7 @@ class Join extends Component {
       duesValue: this.state.duesValue,
     };
     request
-      // .post(`http://localhost:5000/submitapplication`)
-      .post('https://class-improvements-backend.herokuapp.com/submitapplication')
+      .post('/sendapplication')
       .send(data)
       .end((err, res) => {
         if (res === undefined) {

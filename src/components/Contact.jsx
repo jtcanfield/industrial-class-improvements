@@ -14,13 +14,6 @@ class Contact extends Component {
     this.submitform = this.submitform.bind(this);
   }
 
-  componentWillMount() {
-    request
-      // .post(`http://localhost:5000/wakeup`)
-      .post('https://class-improvements-backend.herokuapp.com/wakeup')
-      .end((err, res) => { console.log(res); });
-  }
-
   updateFromField(stateKey) {
     return (event) => {
       this.setState({ [stateKey]: event.target.value, errormessages: false });
@@ -35,8 +28,7 @@ class Contact extends Component {
       message: this.state.message,
     };
     request
-      // .post(`http://localhost:5000/sendemail`)
-      .post('https://class-improvements-backend.herokuapp.com/sendemail')
+      .post('/sendemail')
       .send(data)
       .end((err, res) => {
         if (res === undefined) {
