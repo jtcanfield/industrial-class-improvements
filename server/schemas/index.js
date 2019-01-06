@@ -1,7 +1,9 @@
-const Email = require('./email');
 const Application = require('./application');
+const Email = require('./email');
+const User = require('./user');
 
 module.exports = {
-  Email,
   Application,
+  Email,
+  User,
 };
