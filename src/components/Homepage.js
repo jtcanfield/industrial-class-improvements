@@ -11,9 +11,6 @@ class Homepage extends Component {
   }
 
   componentWillMount() {
-    if (window.innerWidth <= 640) {
-      window.scrollTo(0, 0);
-    }
     this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 

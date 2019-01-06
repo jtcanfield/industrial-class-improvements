@@ -12,9 +12,10 @@ class IWOC extends Component {
       <div className="IWOC component" itemScope itemType="http://schema.org/WebPage">
         <div className="leftaligned" itemScope itemProp="mainContentOfPage">
           <h4>Incarcerated Workers Organizing Committee</h4>
-          <p>Blog: <a href="https://raleighdurhamiwoc.wordpress.com/" target="_blank" rel="noopener noreferrer">
-            raleighdurhamiwoc.wordpress.com
-          </a>
+          <p>{'Blog: '}
+            <a href="https://raleighdurhamiwoc.wordpress.com/" target="_blank" rel="noopener noreferrer">
+              raleighdurhamiwoc.wordpress.com
+            </a>
           </p>
           <p>
             Prisoners are on the front lines of wage slavery and forced slave labor where refusal to work while in prison results in inhumane retaliation and participating in slave labor contributes to the mechanisms of exploitation. The Industrial Workers of the World (IWW) has consciously grasped the importance of organizing prisoners so that prisoners can directly challenge prison slavery, work conditions, and the system itself: break cycles of criminalization, exploitation, and the state‐sponsored divisions of our working class. At the same time, the prison environment and culture is a melting pot of capitalistic and exploitative tactics and all forms of oppression. These poisons must be challenged in prisons, institutions, and in all of us through organized working‐class solidarity.

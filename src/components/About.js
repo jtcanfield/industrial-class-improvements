@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 class About extends Component {
-  componentWillMount() {
-    if (window.innerWidth <= 640) {
-      window.scrollTo(0, 0);
-    }
-  }
-
   render() {
     const moreinfo = {
       color: '#847878',
@@ -46,7 +40,7 @@ class About extends Component {
             These conditions can be changed and the interest of the working class upheld only by an organization formed in such a way that all its members in any one industry, or in all industries if necessary, cease work whenever a strike or lockout is on in any department thereof, thus making an injury to one an injury to all.
           </p>
           <p>
-            Instead of the conservative motto, "A fair day's wage for a fair day's work," we must inscribe on our banner the revolutionary watchword, "Abolition of the wage system."
+            Instead of the conservative motto, {'"A fair day\'s wage for a fair day\'s work," we must inscribe on our banner the revolutionary watchword, "Abolition of the wage system."'}
           </p>
           <p>
             It is the historic mission of the working class to do away with capitalism. The army of production must be organized, not only for everyday struggle with capitalists, but also to carry on production when capitalism shall have been overthrown. By organizing industrially we are forming the structure of the new society within the shell of the old.

@@ -32,9 +32,6 @@ class Join extends Component {
   }
 
   componentWillMount() {
-    if (window.innerWidth <= 640) {
-      window.scrollTo(0, 0);
-    }
     request
       .post('https://class-improvements-backend.herokuapp.com/wakeup')
       .end((err, res) => { console.log(res); });

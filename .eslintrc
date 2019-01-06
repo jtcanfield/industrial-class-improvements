@@ -13,9 +13,6 @@
     "max-len": [
         "off"
     ],
-    "global-require": [
-        "off"
-    ],
     "react/jsx-one-expression-per-line": [
         "off"
     ],

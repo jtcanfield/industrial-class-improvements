@@ -28,6 +28,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <BaseLayout>
+        <Route component={ScrollToTop} />
           <Switch>
             <Route path="/about" render={props => (<About />)} />
             <Route path="/contact" render={props => (<Contact />)} />
@@ -50,5 +51,10 @@ class App extends Component {
     );
   }
 }
+
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+};
 
 export default App;
