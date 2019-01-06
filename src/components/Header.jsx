@@ -12,6 +12,10 @@ class Header extends Component {
     this.click = this.click.bind(this);
   }
 
+  componentDidMount() {
+    console.log(window.user);
+  }
+
   click = (event) => {
     if (event.target.id === 'showSubcommittees') {
       this.setState(prevState => ({ showSubcommittees: !prevState.showSubcommittees }));
@@ -162,6 +166,32 @@ class Header extends Component {
           >
           Donate
           </a>
+          {window.user ? (
+            <a
+              className="verti-center header_link"
+              activeClassName="active_header_link"
+              href="/logout"
+            >
+              <span itemProp="name">Logout</span>
+            </a>
+          ) : (
+            <div>
+              <a
+                className="verti-center header_link"
+                activeClassName="active_header_link"
+                href="/login"
+              >
+                <span itemProp="name">Login</span>
+              </a>
+              <a
+                className="verti-center header_link"
+                activeClassName="active_header_link"
+                href="/register"
+              >
+                <span itemProp="name">Register</span>
+              </a>
+            </div>
+          )}
           {/* <NavLink className="verti-center header_link"
             activeClassName="active_header_link"
             to="/donate">

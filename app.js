@@ -55,7 +55,7 @@ app.get('/register', (req, res) => {
 
 app.get('*', (req, res) => {
   res.render('reactapp', {
-    loggedIn: req.user ? req.user.name : false,
+    user: req.user ? req.user.name : '',
   });
 });
 
