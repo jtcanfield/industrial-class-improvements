@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions */
 
 class Header extends Component {
   constructor(props) {
@@ -107,7 +108,7 @@ class Header extends Component {
           >
             <span itemProp="name">Events</span>
           </NavLink>
-          <div onMouseEnter={console.log('entering')} onMouseLeave={console.log('leaving')} id="showSubcommittees" className="verti-center header_link dropdownMenu">
+          <div id="showSubcommittees" className="verti-center header_link dropdownMenu">
             <span id="showSubcommittees" className={subcommitteesDropdownIcon}>
               Subcommittees
             </span>

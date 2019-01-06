@@ -38,18 +38,18 @@ class Join extends Component {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
-  updateFromField(stateKey) {
-    return (event) => {
-      this.setState({ [stateKey]: event.target.value, errormessages: false });
-    };
-  }
-
   handlecheckboxchange = (event) => {
-    this.setState({ [event.target.id]: !this.state[event.target.id] });
+    this.setState(prevState => ({ [event.target.id]: !prevState[event.target.id] }));
   }
 
   handleSelectChange = (event) => {
     this.setState({ duesValue: event.target.value });
+  }
+
+  updateFromField(stateKey) {
+    return (event) => {
+      this.setState({ [stateKey]: event.target.value, errormessages: false });
+    };
   }
 
   submitform(event) {
@@ -109,148 +109,160 @@ class Join extends Component {
           </div>
           <form className="enterForm" onSubmit={this.handleFormSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Name:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="text"
-                onChange={this.updateFromField('name')}
-                value={this.state.name}
-                placeholder="name"
-                id="name"
-                required="true"
-              />
+              <label htmlFor="name">Name:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="text"
+                  onChange={this.updateFromField('name')}
+                  value={this.state.name}
+                  placeholder="name"
+                  id="name"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="address">Address:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="text"
-                onChange={this.updateFromField('address')}
-                value={this.state.address}
-                placeholder="address"
-                id="address"
-                required="true"
-              />
+              <label htmlFor="address">Address:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="text"
+                  onChange={this.updateFromField('address')}
+                  value={this.state.address}
+                  placeholder="address"
+                  id="address"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="city">City:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="text"
-                onChange={this.updateFromField('city')}
-                value={this.state.city}
-                placeholder="city"
-                id="city"
-                required="true"
-              />
+              <label htmlFor="city">City:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="text"
+                  onChange={this.updateFromField('city')}
+                  value={this.state.city}
+                  placeholder="city"
+                  id="city"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="state">State:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="text"
-                onChange={this.updateFromField('state')}
-                value={this.state.state}
-                placeholder="state"
-                id="state"
-                required="true"
-              />
+              <label htmlFor="state">State:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="text"
+                  onChange={this.updateFromField('state')}
+                  value={this.state.state}
+                  placeholder="state"
+                  id="state"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="zip">Zip:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="text"
-                onChange={this.updateFromField('zip')}
-                value={this.state.zip}
-                placeholder="zip"
-                id="zip"
-                required="true"
-              />
+              <label htmlFor="zip">Zip:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="text"
+                  onChange={this.updateFromField('zip')}
+                  value={this.state.zip}
+                  placeholder="zip"
+                  id="zip"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="country">Country:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="text"
-                onChange={this.updateFromField('country')}
-                value={this.state.country}
-                placeholder="country"
-                id="country"
-                required="true"
-              />
+              <label htmlFor="country">Country:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="text"
+                  onChange={this.updateFromField('country')}
+                  value={this.state.country}
+                  placeholder="country"
+                  id="country"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="email"
-                onChange={this.updateFromField('email')}
-                value={this.state.email}
-                placeholder="email"
-                id="email"
-                required="true"
-              />
+              <label htmlFor="email">Email:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="email"
+                  onChange={this.updateFromField('email')}
+                  value={this.state.email}
+                  placeholder="email"
+                  id="email"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="phone">phone:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="tel"
-                onChange={this.updateFromField('phone')}
-                value={this.state.phone}
-                placeholder="phone"
-                id="phone"
-                required="true"
-              />
+              <label htmlFor="phone">phone:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="tel"
+                  onChange={this.updateFromField('phone')}
+                  value={this.state.phone}
+                  placeholder="phone"
+                  id="phone"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="employer">Employer:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="text"
-                onChange={this.updateFromField('employer')}
-                value={this.state.employer}
-                placeholder="employer"
-                id="employer"
-                required="true"
-              />
+              <label htmlFor="employer">Employer:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="text"
+                  onChange={this.updateFromField('employer')}
+                  value={this.state.employer}
+                  placeholder="employer"
+                  id="employer"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="occupation">Occupation:<span className="requiredstar">*</span></label><br />
-              <input
-                className="textareastyle"
-                type="text"
-                onChange={this.updateFromField('occupation')}
-                value={this.state.occupation}
-                placeholder="occupation"
-                id="occupation"
-                required="true"
-              />
+              <label htmlFor="occupation">Occupation:<span className="requiredstar">*</span><br />
+                <input
+                  className="textareastyle"
+                  type="text"
+                  onChange={this.updateFromField('occupation')}
+                  value={this.state.occupation}
+                  placeholder="occupation"
+                  id="occupation"
+                  required="true"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <input
-                type="checkbox"
-                onChange={this.handlecheckboxchange}
-                checked={this.state.worker}
-                value={this.state.worker}
-                id="worker"
-                required="true"
-              />
-              <label htmlFor="worker">I affirm that I am a worker and that I am not an employer.<span className="requiredstar">*</span></label><br />
+              <label htmlFor="worker">
+                <input
+                  type="checkbox"
+                  onChange={this.handlecheckboxchange}
+                  checked={this.state.worker}
+                  value={this.state.worker}
+                  id="worker"
+                  required="true"
+                />
+                I affirm that I am a worker and that I am not an employer.<span className="requiredstar">*</span>
+              </label>
             </div>
             <div className="form-group">
-              <input
-                className="textareastyle"
-                type="checkbox"
-                onChange={this.handlecheckboxchange}
-                checked={this.state.constitution}
-                value={this.state.constitution}
-                id="constitution"
-                required="true"
-              />
-              <label htmlFor="constitution">I agree to abide by the constitution and regulations of this
-                organization, and will study its principles and acquaint myself with
+              <label htmlFor="constitution">
+                <input
+                  type="checkbox"
+                  onChange={this.handlecheckboxchange}
+                  checked={this.state.constitution}
+                  value={this.state.constitution}
+                  id="constitution"
+                  required="true"
+                />
+                I agree to abide by the constitution and regulations of this
+                  organization, and will study its principles and acquaint myself with
                 its purposes.<span className="requiredstar">*</span>
               </label><br />
             </div>
@@ -266,70 +278,76 @@ class Join extends Component {
             </select>
             <p>If you would like to, answer the questions below to help us get to know you!</p>
             <div className="form-group">
-              <label htmlFor="why">Why are you joining the IWW?</label><br />
-              <textarea
-                type="text"
-                className="textareastyle"
-                rows="5"
-                onChange={this.updateFromField('why')}
-                value={this.state.why}
-                id="why"
-              />
+              <label htmlFor="why">Why are you joining the IWW?<br />
+                <textarea
+                  type="text"
+                  className="textareastyle"
+                  rows="5"
+                  onChange={this.updateFromField('why')}
+                  value={this.state.why}
+                  id="why"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="heardfrom">How did you hear about the IWW?</label><br />
-              <textarea
-                type="text"
-                className="textareastyle"
-                rows="5"
-                onChange={this.updateFromField('heardfrom')}
-                value={this.state.heardfrom}
-                id="heardfrom"
-              />
+              <label htmlFor="heardfrom">How did you hear about the IWW?<br />
+                <textarea
+                  type="text"
+                  className="textareastyle"
+                  rows="5"
+                  onChange={this.updateFromField('heardfrom')}
+                  value={this.state.heardfrom}
+                  id="heardfrom"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="involved">How involved do you expect to be? What kind of activities would you like to participate in?</label><br />
-              <textarea
-                type="text"
-                className="textareastyle"
-                rows="5"
-                onChange={this.updateFromField('involved')}
-                value={this.state.involved}
-                id="involved"
-              />
+              <label htmlFor="involved">How involved do you expect to be? What kind of activities would you like to participate in?\<br />
+                <textarea
+                  type="text"
+                  className="textareastyle"
+                  rows="5"
+                  onChange={this.updateFromField('involved')}
+                  value={this.state.involved}
+                  id="involved"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="skills">Please describe any special skills that you may have.</label><br />
-              <textarea
-                type="text"
-                className="textareastyle"
-                rows="5"
-                onChange={this.updateFromField('skills')}
-                value={this.state.skills}
-                id="skills"
-              />
+              <label htmlFor="skills">Please describe any special skills that you may have.<br />
+                <textarea
+                  type="text"
+                  className="textareastyle"
+                  rows="5"
+                  onChange={this.updateFromField('skills')}
+                  value={this.state.skills}
+                  id="skills"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="otherorganizations">Have you been involved in other organizations? If so, which ones and what kind of activities did you get involved in as a member?</label><br />
-              <textarea
-                type="text"
-                className="textareastyle"
-                rows="5"
-                onChange={this.updateFromField('otherorganizations')}
-                value={this.state.otherorganizations}
-                id="otherorganizations"
-              />
+              <label htmlFor="otherorganizations">Have you been involved in other organizations? If so, which ones and what kind of activities did you get involved in as a member?<br />
+                <textarea
+                  type="text"
+                  className="textareastyle"
+                  rows="5"
+                  onChange={this.updateFromField('otherorganizations')}
+                  value={this.state.otherorganizations}
+                  id="otherorganizations"
+                />
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="internet">Do you have consistent internet access?</label><br />
-              <textarea
-                type="text"
-                className="textareastyle"
-                rows="5"
-                onChange={this.updateFromField('internet')}
-                value={this.state.internet}
-                id="internet"
-              />
+              <label htmlFor="internet">Do you have consistent internet access?<br />
+                <textarea
+                  type="text"
+                  className="textareastyle"
+                  rows="5"
+                  onChange={this.updateFromField('internet')}
+                  value={this.state.internet}
+                  id="internet"
+                />
+              </label>
             </div>
             {this.state.errormessages ? (this.state.errormessages) : ''}
             <br />
