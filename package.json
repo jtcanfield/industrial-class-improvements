@@ -20,6 +20,8 @@
     "express-validator": "^5.3.1",
     "hbs": "^4.0.1",
     "mailgun-js": "^0.22.0",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.2",
     "morgan": "^1.9.0",
     "react": "^16.1.1",
     "react-cookies": "^0.1.0",
@@ -47,6 +49,7 @@
     "file-loader": "^3.0.1",
     "nodemon": "^1.18.9",
     "onchange": "^5.2.0",
+    "shelljs": "^0.8.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.0"

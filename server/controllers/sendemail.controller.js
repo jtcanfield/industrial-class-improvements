@@ -1,4 +1,5 @@
 const mailgun = require('mailgun-js')({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
+const { Email } = require('../schemas');
 
 module.exports = async (req, res) => {
   try {
@@ -24,10 +25,19 @@ module.exports = async (req, res) => {
       subject: `MESSAGE RECIEVED FROM WEBSITE ${req.body.phone}`,
       text,
     };
+    const emailDbEntry = new Email({
+      email: req.body.email,
+      phone: req.body.phone,
+      message: req.body.message,
+      delivered: false,
+    });
     return mailgun.messages().send(data, (error) => {
       if (error) {
+        emailDbEntry.save();
         throw error;
       }
+      emailDbEntry.delivered = true;
+      emailDbEntry.save();
       return res.status(200).send('Message Sent');
     });
   } catch (error) {

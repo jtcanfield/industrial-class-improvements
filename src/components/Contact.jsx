@@ -10,6 +10,7 @@ class Contact extends Component {
       phone: '',
       message: '',
       errormessages: false,
+      submitting: false,
     };
     this.submitform = this.submitform.bind(this);
   }
@@ -21,6 +22,7 @@ class Contact extends Component {
   }
 
   submitform(event) {
+    this.setState({ submitting: true });
     event.preventDefault();
     const data = {
       email: this.state.email,
@@ -32,14 +34,14 @@ class Contact extends Component {
       .send(data)
       .end((err, res) => {
         if (res === undefined) {
-          this.setState({ errormessages: 'Internal Server Error' });
+          this.setState({ errormessages: 'Internal Server Error', submitting: false });
         } else if (res.statusCode === 400) {
-          this.setState({ errormessages: res.text });
+          this.setState({ errormessages: res.text, submitting: false });
         } else if (res.statusCode === 200) {
           alert('Thank you for contacting us! We will reach out to you soon!');
           window.location.reload();
         } else {
-          this.setState({ errormessages: 'Internal Server Error' });
+          this.setState({ errormessages: 'Internal Server Error', submitting: false });
         }
       });
   }
@@ -112,6 +114,7 @@ class Contact extends Component {
             <br />
             <div>
               <button className="submitbutton" type="submit" onClick={event => this.submitform(event)}>
+                {this.state.submitting && <img alt="loading" src="./loading.svg" className="loadingsvg" />}
                 Send Message
               </button>
             </div>

@@ -82,6 +82,11 @@ label {
   color: red;
 }
 
+.loadingsvg {
+  height: 50px;
+  width: 50px;
+}
+
 .poster_holder a{
   text-decoration: none;
 }

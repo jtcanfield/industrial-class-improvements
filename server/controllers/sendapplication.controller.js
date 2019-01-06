@@ -1,4 +1,5 @@
 const mailgun = require('mailgun-js')({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
+const { Application } = require('../schemas');
 
 module.exports = async (req, res) => {
   try {
@@ -57,10 +58,33 @@ module.exports = async (req, res) => {
       subject: 'APPLICATION RECIEVED FROM WEBSITE',
       text,
     };
+    const applicationDbEntry = new Application({
+      name: req.body.name,
+      address: req.body.address,
+      city: req.body.city,
+      state: req.body.state,
+      zip: req.body.zip,
+      country: req.body.country,
+      email: req.body.email,
+      phone: req.body.phone,
+      employer: req.body.employer,
+      occupation: req.body.occupation,
+      duesValue: req.body.duesValue,
+      why: req.body.why,
+      heardfrom: req.body.heardfrom,
+      involved: req.body.involved,
+      skills: req.body.skills,
+      otherorganizations: req.body.otherorganizations,
+      internet: req.body.internet,
+      delivered: false,
+    });
     return mailgun.messages().send(data, (error) => {
       if (error) {
+        applicationDbEntry.save();
         throw error;
       }
+      applicationDbEntry.delivered = true;
+      applicationDbEntry.save();
       return res.status(200).send('Message Sent');
     });
   } catch (error) {
