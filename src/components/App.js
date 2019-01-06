@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import BaseLayout from './Base-Layout.js';
-import Homepage from './Homepage.js';
-import About from './About.js';
-import Contact from './Contact.js';
-import Events from './Events.js';
-import IWOC from './IWOC.js';
-import Donate from './Donate.js';
-import Wfw from './Wfw.js';
-import Gdc from './Gdc.js';
-import Join from './Join.js';
-import Posters from './Posters.js';
-import Redirectpage from './Redirect.js';
-import Dues from './Dues.js';
-import Duestaken from './Duestaken.js';
-import SitemapDownload from './SitemapDownload.js';
+import BaseLayout from './Base-Layout';
+import Homepage from './Homepage';
+import About from './About';
+import Contact from './Contact';
+import Events from './Events';
+import IWOC from './IWOC';
+import Donate from './Donate';
+import Wfw from './Wfw';
+import Gdc from './Gdc';
+import Join from './Join';
+import Posters from './Posters';
+import Redirectpage from './Redirect';
+import Dues from './Dues';
+import Duestaken from './Duestaken';
+import SitemapDownload from './SitemapDownload';
 
 class App extends Component {
   constructor(props) {
