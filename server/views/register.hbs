@@ -9,62 +9,63 @@
 <div>
   <h1 class="text-center">Registration Form</h1>
   <p class="text-center">Have your Redcard handy! All fields excepted address line 2 are required.</p>
-  <form action="/register" method="post">
+  <p class="text-center text-danger">{{{error}}}</p>
+  <form action="/register" method="post" enctype='application/x-www-form-urlencoded'>
 
     <div class="container">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Joe Hill" required>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Joe Hill" required value="{{{name}}}">
       </div>
 
       <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" placeholder="joehill1879" required>
+        <input type="text" class="form-control" name="username" id="username" placeholder="joehill1879" required value="{{{username}}}">
       </div>
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" class="form-control" id="email" placeholder="joe.hill@iww.com" required>
+        <input type="text" class="form-control" name="email" id="email" placeholder="joe.hill@iww.com" required value="{{{email}}}">
       </div>
 
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password" required>
       </div>
 
       <div class="form-group">
         <label for="password2">Confirm Password</label>
-        <input type="password" class="form-control" id="password2" placeholder="Confirm Password" required>
+        <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password" required>
       </div>
 
       <div class="form-group">
-        <label for="xNum">Membership Number/X Number (without x)</label>
-        <input type="text" class="form-control" id="xNum" placeholder="384625" required>
+        <label for="xnum">Membership Number/X Number (without x)</label>
+        <input type="text" class="form-control" name="xnum" id="xnum" placeholder="384625" required value="{{{xnum}}}">
       </div>
 
       <div class="form-group">
-        <label for="iuNum">Industrial Union</label>
-        <input type="text" class="form-control" id="iuNum" placeholder="560" required>
+        <label for="iunum">Industrial Union</label>
+        <input type="text" class="form-control" name="iunum" id="iunum" placeholder="560" required value="{{{iunum}}}">
       </div>
 
       <div class="form-group">
         <label for="address1">Address Line 1</label>
-        <input type="text" class="form-control" id="address1" placeholder="2036 W Montrose Ave" required>
+        <input type="text" class="form-control" name="address1" id="address1" placeholder="2036 W Montrose Ave" required value="{{{address1}}}">
       </div>
 
       <div class="form-group">
         <label for="address2">Address Line 2</label>
-        <input type="text" class="form-control" id="address2" placeholder="(optional)">
+        <input type="text" class="form-control" name="address2" id="address2" placeholder="(optional)" value="{{{address2}}}">
       </div>
 
       <div class="form-group">
         <label for="city">City</label>
-        <input type="text" class="form-control" id="city" placeholder="Chicago" required>
+        <input type="text" class="form-control" name="city" id="city" placeholder="Chicago" required value="{{{city}}}">
       </div>
 
       <div class="form-group">
         <label for="state">State</label>
-        <select class="form-control" id="state">
+        <select class="form-control" name="state" id="state">
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
           <option value="AZ">Arizona</option>
@@ -121,7 +122,7 @@
 
       <div class="form-group">
         <label for="zip">Zip</label>
-        <input type="text" class="form-control" id="zip" placeholder="60618" required>
+        <input type="text" class="form-control" name="zip" id="zip" placeholder="60618" required value={{{zip}}}>
       </div>
 
       <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>

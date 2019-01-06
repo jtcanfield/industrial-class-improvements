@@ -33,14 +33,28 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.use((req, res, next) => {
+  console.log(req.user);
+  next();
+});
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.post('*', router);
 
+app.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/home');
+});
 app.get('/login', (req, res) => {
+  if (req.user) {
+    res.redirect('/home');
+  }
   res.render('login');
 });
 app.get('/register', (req, res) => {
+  if (req.user) {
+    res.redirect('/home');
+  }
   res.render('register');
 });
 app.get('*', (req, res) => {

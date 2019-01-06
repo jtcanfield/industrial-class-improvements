@@ -12,6 +12,41 @@ const schema = new mongoose.Schema(
     },
     password: {
       type: String,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      index: { unique: true },
+    },
+    xnum: {
+      type: Number,
+      required: true,
+    },
+    iunum: {
+      type: Number,
+      required: true,
+    },
+    address1: {
+      type: String,
+      required: true,
+    },
+    address2: {
+      type: String,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
+    zip: {
+      type: String,
       required: true,
     },
   },
