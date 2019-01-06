@@ -9,8 +9,8 @@
     "client:watch": "onchange \"src/**\" -- npm run client:build",
     "client:build": "webpack",
     "client:buildProd": "webpack",
-    "lint": "./node_modules/.bin/eslint app.js ./src",
-    "fix": "./node_modules/.bin/eslint app.js ./src --fix"
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx app.js ./src",
+    "fix": "./node_modules/.bin/eslint --ext .js,.jsx app.js ./src --fix"
   },
   "dependencies": {
     "@axetroy/react-download": "^1.0.0",

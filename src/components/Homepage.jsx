@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Announcement from './Announcement.js';
 import news from '../data/news.json';
 
 class Homepage extends Component {

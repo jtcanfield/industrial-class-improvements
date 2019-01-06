@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 class IWOC extends Component {
-  componentWillMount() {
-    if (window.innerWidth <= 640) {
-      window.scrollTo(0, 0);
-    }
-  }
-
   render() {
     return (
       <div className="IWOC component" itemScope itemType="http://schema.org/WebPage">
