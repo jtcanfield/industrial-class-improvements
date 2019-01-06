@@ -18,7 +18,7 @@ class Contact extends Component {
     request
       // .post(`http://localhost:5000/wakeup`)
       .post('https://class-improvements-backend.herokuapp.com/wakeup')
-      .end((err, res) => { console.log('Server is Awake'); });
+      .end((err, res) => { console.log(res); });
   }
 
   updateFromField(stateKey) {
@@ -113,12 +113,13 @@ class Contact extends Component {
                 required="true"
               />
             </div>
-            {this.state.errormessages ? (this.state.errormessages) : '' }
-            <br /><div>
+            {this.state.errormessages ? (this.state.errormessages) : ''}
+            <br />
+            <div>
               <button className="submitbutton" type="submit" onClick={event => this.submitform(event)}>
                 Send Message
               </button>
-                  </div>
+            </div>
           </form>
           <br /><br />
           <iframe

@@ -6,7 +6,6 @@ class Dues extends Component {
     request
       .post('https://class-improvements-backend.herokuapp.com/wakeup')
       .end((err, res) => { console.log(res); });
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
   render() {

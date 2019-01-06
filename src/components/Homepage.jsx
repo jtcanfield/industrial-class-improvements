@@ -14,13 +14,11 @@ class Homepage extends Component {
   }
 
   showMoreArticles = () => {
-    this.setState(prevState => ({ numberShown: prevState.numberShown + 5 }));
-  }
-
-  componentDidUpdate() {
-    if (this.state.initdropdown === true & this.state.numberShown > news.length) {
-      this.setState({ initdropdown: false });
-    }
+    this.setState(prevState => ({ numberShown: prevState.numberShown + 5 }), () => {
+      if (this.state.initdropdown === true && this.state.numberShown > news.length) {
+        this.setState({ initdropdown: false });
+      }
+    });
   }
 
   render() {
@@ -99,7 +97,7 @@ class Homepage extends Component {
                 Show More
               </small>
               <div className="showMoreArrow">
-                  ▼
+                ▼
               </div>
             </div>
           </div>
