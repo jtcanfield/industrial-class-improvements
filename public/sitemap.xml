@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://rdiww.org</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/home</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/about</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/contact</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/events</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/iwoc</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/gdc</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/wfw</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/posters</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/dues</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+<url>
+  <loc>https://rdiww.org/joinus</loc>
+  <priority>0.5</priority>
+  <lastmod>2017-12-09T18:03:22+00:00</lastmod>
+</url>
+</urlset>

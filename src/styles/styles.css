@@ -1,0 +1,522 @@
+@import 'bootstrap.4.beta.3.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, a{
+  font-family: 'Merriweather Sans', sans-serif;
+  color: red;
+}
+
+h4, p, .form-group{
+  padding-top: 1rem;
+}
+
+label {
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+  color: #847878;
+  font-weight: bold;
+}
+
+@keyframes entrance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes logo {
+  0% { opacity: 0; max-height: 75vh; }
+  50% { opacity: 1; max-height: 75vh; }
+  100% { opacity: 1; max-height: 250px; }
+}
+
+@keyframes fade {
+  0% {opacity: 1; height: 100vh; width: 100vw;}
+  50% {opacity: 1; height: 100vh; width: 100vw;}
+  99% {height: 100vh; width: 100vw;}
+  100% {opacity: 0; height: 0px; width: 0px; }
+}
+
+.component{
+  animation-name: entrance;
+  animation-duration: .1s;
+}
+
+.fade{
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  position: fixed;
+  opacity: 0;
+  animation-name: fade !important;
+  animation-duration: 1.5s;
+  background-color: white;
+}
+
+.iwwlogo{
+  position: relative;
+  z-index: 3;
+  opacity: 1;
+  animation-name: logo !important;
+  animation-duration: .75s;
+  max-height: 250px;
+  margin-bottom: 20px;
+}
+
+.requiredstar{
+  color: red;
+}
+
+.navlinks a{
+  padding: .375rem .75rem;
+  display: inline-block;
+}
+
+.navlinks a:hover{
+  text-decoration: none;
+  color: red;
+}
+
+.poster_holder a{
+  text-decoration: none;
+}
+
+.poster_holder h5{
+  color: #847878;
+}
+
+.poster_holder h5:hover{
+  color: red;
+}
+
+.body{
+  margin: 10px 5%;
+}
+
+.body > div {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+iframe{
+  margin: 0px -10px;
+  padding-top: 1rem;
+}
+
+.Header{
+  border-bottom: 3px solid #847878;
+  text-align: center;
+}
+
+.Footer{
+  padding: 20px 0;
+  color: #847878;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.header_link{
+  color: #847878;
+}
+
+.active_header_link{
+  color: red !important;
+  font-weight: bold;
+}
+
+.leftaligned{
+  text-align: left;
+}
+
+.announcements {
+  border: 2px solid red;
+  border-radius: 10px;
+}
+
+.announcements h5 {
+  color: black;
+}
+
+.announcements h4 a {
+  text-decoration: underline;
+  color: #0000EE;
+}
+
+.announcements h4 a:visited {
+  text-decoration: underline;
+  color: #551A8B;
+}
+
+.announcements a {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.gdcfirstpara{
+  display: flex;
+  flex-direction: row;
+}
+
+.modalbutton, .hitbox{
+  display: none;
+}
+
+.header_logo_title{
+  border-radius: 0px 0px 100vh 175px;
+}
+.title_of_page{
+  padding: 0 10%;
+  position: relative;
+  color: #847878;
+  font-size: 1.3rem;
+}
+
+/*BELOW IS CURVE*/
+.curveholder{
+  height: 1px;
+}
+.curveholder svg{
+  width: 100%;
+  transform: translateY(-100%);
+}
+
+.submitbutton{
+  width: 100%;
+  max-width: 500px;
+  background-color: red;
+  font-size: 24px;
+  color: white;
+  border: 0;
+}
+
+.textareastyle{
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid black;
+}
+
+.dues_form input[type="text"], .dues_form select{
+  border: 1px solid #555555;
+}
+
+/* Begin Subcommittees */
+.dropdownMenu{
+  cursor: pointer;
+  padding: .375rem .75rem;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.dropdownContent{
+  position: absolute;
+  display: none;
+  background-color: #fff;
+}
+
+.dropdownContent a{
+  border: 1px solid #847878;
+  width: 100%;
+}
+
+.dropdownMenu:hover .dropdownContent{
+  display: block;
+}
+
+.subcommitteesDropdownIcon:after, .subcommitteesDropdownIconOpen:after{
+  content: " ▾";
+}
+/* End Subcommittees */
+
+/* News */
+.newsstyles, .noShowButton{
+  display:none;
+}
+
+.newsArticle:hover {
+  background-color: #f9e3e3;
+}
+
+.showMoreButton{
+  cursor: pointer;
+  width: 100%;
+  color: #847878;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+  border-radius: 10px;
+  overflow: visible;
+}
+.showMoreText{
+  display: block;
+  transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1); /* Safari and Chrome */
+  -moz-transform: scale(1.1, 1.1); /* Firefox */
+  -ms-transform: scale(1.1, 1.1); /* IE 9+ */
+  -o-transform: scale(1.1, 1.1); /* Opera */
+  background-color:#fff;
+}
+.showMoreArrow{
+  color: red;
+  display: block;
+  transform: scale(1, 0.5);
+  -webkit-transform: scale(1, 0.5); /* Safari and Chrome */
+  -moz-transform: scale(1, 0.5); /* Firefox */
+  -ms-transform: scale(1, 0.5); /* IE 9+ */
+  -o-transform: scale(1, 0.5); /* Opera */
+}
+.showMoreButton:hover{
+  background-color: #EBEAEA;
+  /* color: white; */
+}
+/* End News */
+
+@media (max-width: 640px) {
+  /* Begin Subcommittees */
+  .dropdownMenu{
+    width: 100%;
+    border-bottom: 1px solid #847878;
+  }
+  .dropdownContent{
+    visibility: hidden;
+    display: none;
+    width: 80%;
+    background-color: #fff;
+  }
+  .showSubcommitteesModal{
+    visibility: visible;
+    display: block;
+    left:200px;
+  }
+  .subcommitteesDropdownIconOpen:after{
+    content: " ▸";
+  }
+  /* End Subcommittees */
+
+  .dues_form{
+    border: 1px solid #555555;
+  }
+
+  .header_logo_title{
+    margin-bottom: 15px;
+  }
+
+  .imgtest{
+    margin: 0 auto;
+  }
+
+  .gdcfirstpara{
+    flex-direction: column;
+  }
+
+  .body{
+    margin: 10px 0%;
+  }
+
+  .hiddenmodal{
+    margin-left: -200px;
+  }
+
+  .shownmodal{
+    /*z-index: 5;*/
+  }
+
+  .navlinks {
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.21);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.21);
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.21);
+    transition: all 0.2s;
+    position: fixed;
+    left: 0;
+    z-index: 99;
+    top: 0;
+    width: 200px;
+    border-radius: 0 0 10px 0;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: #fff!important;
+  }
+
+  .navlinks a{
+    width: 100%;
+    color: black;
+    border-bottom: 1px solid #847878;
+  }
+
+  .iwwlogo{
+    max-height: 200px;
+  }
+
+  .modalbutton{
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.21);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.21);
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.21);
+    border-radius: 0 10px 10px 0;
+    padding: 30px 10px;
+    transition: all 0.2s;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    z-index: 100;
+    font-size: 30px;
+    color: white;
+    background-color: red;
+    width: 30px;
+  }
+
+  .hitbox{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: 55px;
+    height: 80px;
+  }
+
+  .openmodalbackground{
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 90;
+  }
+
+  .smallarrowleft {
+    transition: all 0.2s;
+    z-index: 101;
+    position: fixed;
+    top: 10px;
+    left: 210px;
+  	width: 0;
+  	height: 0;
+  	border-top: 20px solid transparent;
+  	border-right: 10px solid white;
+  	border-bottom: 20px solid transparent;
+  }
+  .smallarrowright {
+    transition: all 0.2s;
+    z-index: 101;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  	width: 0;
+  	height: 0;
+  	border-bottom: 20px solid transparent;
+  	border-left: 10px solid white;
+  	border-top: 20px solid transparent;
+  }
+}
+
+/* merriweather-sans-300 - latin-ext_latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./merriweather-sans-v9-latin-ext_latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans Light'), local('MerriweatherSans-Light'),
+       url('./merriweather-sans-v9-latin-ext_latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./merriweather-sans-v9-latin-ext_latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-300.woff') format('woff'), /* Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./merriweather-sans-v9-latin-ext_latin-300.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+/* merriweather-sans-regular - latin-ext_latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./merriweather-sans-v9-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans'), local('MerriweatherSans-Regular'),
+       url('./merriweather-sans-v9-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./merriweather-sans-v9-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./merriweather-sans-v9-latin-ext_latin-regular.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+/* merriweather-sans-300italic - latin-ext_latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./merriweather-sans-v9-latin-ext_latin-300italic.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans Light Italic'), local('MerriweatherSans-LightItalic'),
+       url('./merriweather-sans-v9-latin-ext_latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./merriweather-sans-v9-latin-ext_latin-300italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-300italic.woff') format('woff'), /* Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./merriweather-sans-v9-latin-ext_latin-300italic.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+/* merriweather-sans-700 - latin-ext_latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./merriweather-sans-v9-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans Bold'), local('MerriweatherSans-Bold'),
+       url('./merriweather-sans-v9-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./merriweather-sans-v9-latin-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./merriweather-sans-v9-latin-ext_latin-700.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+/* merriweather-sans-italic - latin-ext_latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./merriweather-sans-v9-latin-ext_latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans Italic'), local('MerriweatherSans-Italic'),
+       url('./merriweather-sans-v9-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./merriweather-sans-v9-latin-ext_latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./merriweather-sans-v9-latin-ext_latin-italic.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+/* merriweather-sans-800 - latin-ext_latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./merriweather-sans-v9-latin-ext_latin-800.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans ExtraBold'), local('MerriweatherSans-ExtraBold'),
+       url('./merriweather-sans-v9-latin-ext_latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./merriweather-sans-v9-latin-ext_latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-800.woff') format('woff'), /* Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./merriweather-sans-v9-latin-ext_latin-800.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+/* merriweather-sans-700italic - latin-ext_latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./merriweather-sans-v9-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans Bold Italic'), local('MerriweatherSans-BoldItalic'),
+       url('./merriweather-sans-v9-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./merriweather-sans-v9-latin-ext_latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./merriweather-sans-v9-latin-ext_latin-700italic.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+/* merriweather-sans-800italic - latin-ext_latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: url('./merriweather-sans-v9-latin-ext_latin-800italic.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans ExtraBold Italic'), local('MerriweatherSans-ExtraBoldItalic'),
+       url('./merriweather-sans-v9-latin-ext_latin-800italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./merriweather-sans-v9-latin-ext_latin-800italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-800italic.woff') format('woff'), /* Modern Browsers */
+       url('./merriweather-sans-v9-latin-ext_latin-800italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./merriweather-sans-v9-latin-ext_latin-800italic.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}

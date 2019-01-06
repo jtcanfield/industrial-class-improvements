@@ -1,0 +1,36 @@
+.nav-menu{
+  display: flex;
+  justify-content: center;
+}
+.page_item:hover a:first-of-type{
+  color: red;
+}
+.current_page_item a{
+  color: red;
+  font-weight: bold;
+}
+#primary.content-area {
+  float: none;
+  width: 100%;
+  padding-right: 0;
+}
+#secondary.widget-area {
+  float: none;
+  width: 100%;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+#content {
+  animation: fadein 500ms;
+}
+@media screen and (max-width: 768px){
+  .main-navigation ul li .indicator {
+    transform: scale(1.5);
+  }
+  .main-navigation ul li .indicator:before {
+    content: "\f067";
+    font-size: 20px;
+  }
+}
