@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const expressValidator = require('express-validator');
 const passport = require('passport');
+const csrf = require('csrf');
 const LocalStrategy = require('passport-local').Strategy;
 const expressSession = require('express-session')({
   secret: process.env.SESSION_SECRET || 'workersoftheworld',
@@ -24,6 +25,10 @@ app.use(expressValidator());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(csrf({ cookie: true }), (req, res, next) => {
+  res.cookie('XSRF-TOKEN', req.csrfToken());
+  next();
+});
 
 app.use(expressSession);
 app.use(passport.initialize());
@@ -40,12 +45,12 @@ app.get('/logout', (req, res) => {
   res.redirect('/home');
 });
 app.get('/login', (req, res) => {
-  if (req.user) { res.redirect('/home'); }
-  res.render('login');
+  if (req.user) { return res.redirect('/home'); }
+  return res.render('login');
 });
 app.get('/register', (req, res) => {
-  if (req.user) { res.redirect('/home'); }
-  res.render('register');
+  if (req.user) { return res.redirect('/home'); }
+  return res.render('register');
 });
 
 app.get('*', (req, res) => {
