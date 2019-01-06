@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('*', router);
 
 app.get('*', (req, res) => {
-  res.render('index');
+  res.render('reactapp');
 });
 
 // error handler
