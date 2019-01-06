@@ -16,7 +16,6 @@ const { User } = require('./server/schemas');
 
 const app = express();
 
-// view engine setup
 app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'hbs');
 
@@ -33,32 +32,26 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use((req, res, next) => {
-  console.log(req.user);
-  next();
-});
-
 app.use(express.static(path.join(__dirname, 'dist')));
-app.post('*', router);
+app.use('/', router);
 
 app.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/home');
 });
 app.get('/login', (req, res) => {
-  if (req.user) {
-    res.redirect('/home');
-  }
+  if (req.user) { res.redirect('/home'); }
   res.render('login');
 });
 app.get('/register', (req, res) => {
-  if (req.user) {
-    res.redirect('/home');
-  }
+  if (req.user) { res.redirect('/home'); }
   res.render('register');
 });
+
 app.get('*', (req, res) => {
-  res.render('reactapp');
+  res.render('reactapp', {
+    loggedIn: req.user ? req.user.name : false,
+  });
 });
 
 module.exports = app;

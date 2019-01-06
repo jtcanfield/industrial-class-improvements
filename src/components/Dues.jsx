@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import request from 'superagent';
 
 class Dues extends Component {
-
   render() {
     return (
       <div className="Dues component" itemScope itemType="http://schema.org/WebPage">

@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
-import news from '../data/news.json';
+import request from 'superagent';
 
 class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: '0', initdropdown: true, numberShown: 5,
+      width: '0', initdropdown: true, numberShown: 5, news: [],
     };
   }
 
   componentWillMount() {
     this.setState({ width: window.innerWidth });
+    request
+      .get('/news')
+      .end((err, res) => {
+        if (res) {
+          this.setState({ news: res.body });
+        }
+      });
   }
 
   showMoreArticles = () => {
     this.setState(prevState => ({ numberShown: prevState.numberShown + 5 }), () => {
-      if (this.state.initdropdown === true && this.state.numberShown > news.length) {
+      if (this.state.initdropdown === true && this.state.numberShown > this.state.news.length) {
         this.setState({ initdropdown: false });
       }
     });
@@ -44,7 +51,7 @@ class Homepage extends Component {
       };
     }
     const dateSet = new Set();
-    const newsArticles = news.map((article, i) => {
+    const newsArticles = this.state.news.map((article, i) => {
       const key = `news${i}`;
       const date = new Date(article.datePublished);
       let monthHeader = `${article.datePublished.split(' ')[0]} ${date.getFullYear()}`;
