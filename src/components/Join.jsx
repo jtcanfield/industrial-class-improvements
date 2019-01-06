@@ -331,12 +331,13 @@ class Join extends Component {
                 id="internet"
               />
             </div>
-            {this.state.errormessages ? (this.state.errormessages) : '' }
-            <br /><div>
+            {this.state.errormessages ? (this.state.errormessages) : ''}
+            <br />
+            <div>
               <button className="submitbutton" type="submit" onClick={event => this.submitform(event)}>
                 Submit Application
               </button>
-                  </div>
+            </div>
           </form>
         </div>
       </div>
