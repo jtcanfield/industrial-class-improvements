@@ -31,13 +31,6 @@ class Join extends Component {
     this.handleSelectChange = this.handleSelectChange.bind(this);
   }
 
-  componentWillMount() {
-    request
-      .post('https://class-improvements-backend.herokuapp.com/wakeup')
-      .end((err, res) => { console.log(res); });
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
-  }
-
   handlecheckboxchange = (event) => {
     this.setState(prevState => ({ [event.target.id]: !prevState[event.target.id] }));
   }

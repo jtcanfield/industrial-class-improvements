@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import request from 'superagent';
 
 class Dues extends Component {
-  componentWillMount() {
-    request
-      .post('https://class-improvements-backend.herokuapp.com/wakeup')
-      .end((err, res) => { console.log(res); });
-  }
 
   render() {
     return (
