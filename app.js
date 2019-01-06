@@ -35,12 +35,16 @@ passport.deserializeUser(User.deserializeUser());
 
 
 app.use(express.static(path.join(__dirname, 'dist')));
-app.use('*', router);
+app.post('*', router);
 
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+app.get('/register', (req, res) => {
+  res.render('register');
+});
 app.get('*', (req, res) => {
   res.render('reactapp');
 });
-
-// error handler
 
 module.exports = app;
