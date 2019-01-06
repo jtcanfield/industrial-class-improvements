@@ -2,28 +2,29 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 class Gdc extends Component {
-  componentWillMount(){
-    if (window.innerWidth <= 640){
+  componentWillMount() {
+    if (window.innerWidth <= 640) {
       window.scrollTo(0, 0);
     }
   }
+
   render() {
-    let bannerpicture = {
-      "maxWidth":"700px",
-      "width":"100%",
-    }
-    let gdclogo = {
-      "maxHeight":"250px",
-    }
+    const bannerpicture = {
+      maxWidth: '700px',
+      width: '100%',
+    };
+    const gdclogo = {
+      maxHeight: '250px',
+    };
     return (
       <div className="Gdc component" itemScope itemType="http://schema.org/WebPage">
         <div itemScope itemProp="mainContentOfPage">
-          <img alt="General Defense Comittee Holding Anti-Klan Banner" style={bannerpicture} src="./GDCantiklanbanner.jpg"/>
+          <img alt="General Defense Comittee Holding Anti-Klan Banner" style={bannerpicture} src="./GDCantiklanbanner.jpg" />
           <h4 className="leftaligned">General Defense Committee</h4>
           <p>The Industrial Workers of the World (IWW)'s General Defense Committee (GDC) was formed to defend working class people fighting for their rights on the picket line and in their community.</p>
           <div className="leftaligned">
             <div className="gdcfirstpara">
-              <div >
+              <div>
                 <p>The GDC aims include:</p>
                 <ul>
                   <li>Providing support to any member of the working class who finds themselves in legal trouble due to their involvement in the class war.</li>
@@ -32,7 +33,7 @@ class Gdc extends Component {
                 </ul>
               </div>
               <div className="imgtest">
-                <img alt="General Defense Comittee Logo" style={gdclogo} src="./GDCbanner.jpeg"/>
+                <img alt="General Defense Comittee Logo" style={gdclogo} src="./GDCbanner.jpeg" />
               </div>
             </div>
             <div>
@@ -46,10 +47,10 @@ class Gdc extends Component {
             </div>
           </div>
           <p>
-          Are you interested in getting involved with the GDC?<br/>
+          Are you interested in getting involved with the GDC?<br />
           Have ideas for how you'd like to contribute or collaborate?
-          <br/>
-          <NavLink to="/contact">Contact us!</NavLink>
+            <br />
+            <NavLink to="/contact">Contact us!</NavLink>
           </p>
         </div>
       </div>

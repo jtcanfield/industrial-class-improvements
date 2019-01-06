@@ -3,6 +3,32 @@
     "airbnb"
   ],
   "parser": "babel-eslint",
+  "rules": {
+    "linebreak-style": [
+        "off"
+    ],
+    "react/destructuring-assignment": [
+        "off"
+    ],
+    "max-len": [
+        "off"
+    ],
+    "global-require": [
+        "off"
+    ],
+    "react/jsx-one-expression-per-line": [
+        "off"
+    ],
+    "react/jsx-filename-extension": [
+        1,
+        {
+            "extensions": [
+                ".js",
+                ".jsx"
+            ]
+        }
+    ]
+},
   "env": {
     "node": true,
     "es6": true

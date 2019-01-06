@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 class Donate extends Component {
-  componentWillMount(){
-    if (window.innerWidth <= 640){
+  componentWillMount() {
+    if (window.innerWidth <= 640) {
       window.scrollTo(0, 0);
     }
   }
+
   render() {
     return (
       <div className="Donate component" itemScope itemType="http://schema.org/WebPage">

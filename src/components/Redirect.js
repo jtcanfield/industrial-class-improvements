@@ -5,7 +5,7 @@ class Redirectpage extends Component {
   render() {
     return (
       <div className="Redirectpage">
-         <Redirect to="/home"/>
+        <Redirect to="/home" />
       </div>
     );
   }

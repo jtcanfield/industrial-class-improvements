@@ -15,7 +15,8 @@ class Footer extends Component {
         </p>
         <p>Check out our IWOC blog: <a href="https://raleighdurhamiwoc.wordpress.com/" target="_blank" rel="noopener noreferrer">
           raleighdurhamiwoc.wordpress.com
-        </a></p>
+        </a>
+        </p>
       </div>
     );
   }

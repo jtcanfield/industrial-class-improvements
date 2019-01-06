@@ -18,34 +18,35 @@ import SitemapDownload from './SitemapDownload.js';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
+
   render() {
     // <Route path="/gdcflyer.jpg" render={(props) => ( "./posters/gdcflyer.jpg" )}/>
     // <Route path="/gdcflyer.jpg" render={(props) => ( <img alt="GDC Flyer" src="./gdcflyer.jpg"/> )}/>
     // <Route exact path="/" render={(props) => ( <Redirectpage/> )}/>
     return (
-        <BrowserRouter>
-          <BaseLayout>
-            <Switch>
-              <Route path="/about" render={(props) => ( <About/> )}/>
-              <Route path="/contact" render={(props) => ( <Contact/> )}/>
-              <Route path="/events" render={(props) => ( <Events/> )}/>
-              <Route path="/iwoc" render={(props) => ( <IWOC/> )}/>
-              <Route path="/gdc" render={(props) => ( <Gdc/> )}/>
-              <Route path="/wfw" render={(props) => ( <Wfw/> )}/>
-              <Route path="/donate" render={(props) => ( <Donate/> )}/>
-              <Route path="/posters" render={(props) => ( <Posters/> )}/>
-              <Route path="/joinus" render={(props) => ( <Join/> )}/>
-              <Route path="/dues" render={(props) => ( <Dues/> )}/>
-              <Route path="/success" render={(props) => ( <Duestaken/> )}/>
-              <Route path="/sitemap" render={(props) => ( <SitemapDownload/> )}/>
-              <Route path="/home" render={(props) => ( <Homepage/> )}/>
-              <Route path="/" render={(props) => ( <Redirectpage/> )}/>
-              <Route path="" render={(props) => ( <Redirectpage/> )}/>
-            </Switch>
-          </BaseLayout>
-        </BrowserRouter>
+      <BrowserRouter>
+        <BaseLayout>
+          <Switch>
+            <Route path="/about" render={props => (<About />)} />
+            <Route path="/contact" render={props => (<Contact />)} />
+            <Route path="/events" render={props => (<Events />)} />
+            <Route path="/iwoc" render={props => (<IWOC />)} />
+            <Route path="/gdc" render={props => (<Gdc />)} />
+            <Route path="/wfw" render={props => (<Wfw />)} />
+            <Route path="/donate" render={props => (<Donate />)} />
+            <Route path="/posters" render={props => (<Posters />)} />
+            <Route path="/joinus" render={props => (<Join />)} />
+            <Route path="/dues" render={props => (<Dues />)} />
+            <Route path="/success" render={props => (<Duestaken />)} />
+            <Route path="/sitemap" render={props => (<SitemapDownload />)} />
+            <Route path="/home" render={props => (<Homepage />)} />
+            <Route path="/" render={props => (<Redirectpage />)} />
+            <Route path="" render={props => (<Redirectpage />)} />
+          </Switch>
+        </BaseLayout>
+      </BrowserRouter>
     );
   }
 }
