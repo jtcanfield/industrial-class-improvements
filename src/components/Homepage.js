@@ -13,7 +13,7 @@ class Homepage extends Component {
     }
     this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
-  showMoreArticles() {
+  showMoreArticles = () => {
     this.setState(prevState => {
       return {numberShown: prevState.numberShown + 5}
     });

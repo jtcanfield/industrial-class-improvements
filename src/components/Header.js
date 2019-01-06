@@ -10,7 +10,7 @@ class Header extends Component {
     };
     this.click = this.click.bind(this)
   }
-  click(event) {
+  click = (event) => {
     if (event.target.id === "showSubcommittees"){
       this.setState({showSubcommittees:!this.state.showSubcommittees})
     } else {

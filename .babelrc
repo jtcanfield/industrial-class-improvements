@@ -9,9 +9,6 @@
     "env": {
         "development": {
           "plugins": [
-            "@babel/plugin-transform-flow-strip-types",
-            "@babel/plugin-transform-react-jsx-source",
-            ["@babel/plugin-proposal-decorators", { "legacy": true }],
             ["@babel/plugin-proposal-class-properties", { "loose" : true }]
           ]
         }

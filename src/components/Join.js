@@ -44,10 +44,10 @@ class Join extends Component {
       this.setState({[stateKey]: event.target.value, errormessages:false});
     }
   }
-  handlecheckboxchange(event) {
+  handlecheckboxchange = (event) => {
     this.setState({[event.target.id]: !this.state[event.target.id]});
   }
-  handleSelectChange(event) {
+  handleSelectChange = (event) => {
     this.setState({ duesValue: event.target.value });
   }
   submitform(event){

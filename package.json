@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "concurrently \"npm run server:watch\" \"npm run client:watch\" --raw",
+    "dev": "npm run client:build && concurrently \"npm run server:watch\" \"npm run client:watch\" --raw",
     "server:watch": "nodemon ./bin/www",
-    "client:watch": "onchange \"src/**\" -- webpack",
+    "client:watch": "onchange \"src/**\" -- npm run client:build",
+    "client:build": "webpack",
+    "client:buildProd": "webpack",
     "lint": "./node_modules/.bin/eslint app.js ./src",
     "fix": "./node_modules/.bin/eslint app.js ./src --fix"
   },
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",

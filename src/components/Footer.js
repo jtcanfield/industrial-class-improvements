@@ -7,7 +7,9 @@ class Footer extends Component {
         <p>
           See us on Facebook at <a href="https://www.facebook.com/triangleiww/" target="_blank" rel="noopener noreferrer">
             www.facebook.com/triangleiww
-          </a> or Twitter <a href="https://twitter.com/triangleiww" target="_blank" rel="noopener noreferrer">
+          </a>
+          {' or Twitter '}
+          <a href="https://twitter.com/triangleiww" target="_blank" rel="noopener noreferrer">
             @triangleiww
           </a>
         </p>
