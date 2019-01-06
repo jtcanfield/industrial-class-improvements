@@ -6,8 +6,6 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: '0',
-      height: '0',
       email: '',
       phone: '',
       message: '',
@@ -21,7 +19,6 @@ class Contact extends Component {
       // .post(`http://localhost:5000/wakeup`)
       .post('https://class-improvements-backend.herokuapp.com/wakeup')
       .end((err, res) => { console.log('Server is Awake'); });
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
   updateFromField(stateKey) {

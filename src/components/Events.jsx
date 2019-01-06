@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 class Events extends Component {
   constructor(props) {
     super(props);
-    this.state = { width: '0', height: '0' };
+    this.state = { width: '0' };
   }
 
   componentWillMount() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    this.setState({ width: window.innerWidth });
   }
 
   render() {

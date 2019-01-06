@@ -5,12 +5,12 @@ class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: '0', height: '0', initdropdown: true, numberShown: 5,
+      width: '0', initdropdown: true, numberShown: 5,
     };
   }
 
   componentWillMount() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    this.setState({ width: window.innerWidth });
   }
 
   showMoreArticles = () => {
