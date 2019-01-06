@@ -12,10 +12,6 @@ class Header extends Component {
     this.click = this.click.bind(this);
   }
 
-  componentDidMount() {
-    console.log(window.user);
-  }
-
   click = (event) => {
     if (event.target.id === 'showSubcommittees') {
       this.setState(prevState => ({ showSubcommittees: !prevState.showSubcommittees }));
