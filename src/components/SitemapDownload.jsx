@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router'; /* eslint-disable-line */
 import Download from '@axetroy/react-download';
 
 class SitemapDownload extends Component {
@@ -11,7 +11,7 @@ class SitemapDownload extends Component {
     return (
       <div>
         <Download file="sitemap.xml" content="# hello world">
-          <button ref={input => this.inputElement = input} type="button">Click and Download file</button>
+          <button ref={input => this.inputElement = input} type="button">Click and Download file</button> {/* eslint-disable-line */}
         </Download>
         <Redirect to="/home" />
       </div>
