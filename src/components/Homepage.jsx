@@ -89,7 +89,8 @@ class Homepage extends Component {
           </h4>
           <div>
             {newsArticles}
-            <div
+            <button
+              type="button"
               className={this.state.initdropdown ? ('showMoreButton') : ('noShowButton')}
               onClick={this.showMoreArticles}
             >
@@ -99,7 +100,7 @@ class Homepage extends Component {
               <div className="showMoreArrow">
                 ▼
               </div>
-            </div>
+            </button>
           </div>
           <h4 className="leftaligned">
             Facebook Feed

@@ -13,9 +13,9 @@ class Header extends Component {
 
   click = (event) => {
     if (event.target.id === 'showSubcommittees') {
-      this.setState({ showSubcommittees: !this.state.showSubcommittees });
+      this.setState(prevState => ({ showSubcommittees: !prevState.showSubcommittees }));
     } else {
-      this.setState({ modalbuttonactive: !this.state.modalbuttonactive, showSubcommittees: false });
+      this.setState(prevState => ({ modalbuttonactive: !prevState.modalbuttonactive, showSubcommittees: false }));
     }
   }
 
@@ -107,7 +107,7 @@ class Header extends Component {
           >
             <span itemProp="name">Events</span>
           </NavLink>
-          <div id="showSubcommittees" className="verti-center header_link dropdownMenu">
+          <div onMouseEnter={console.log('entering')} onMouseLeave={console.log('leaving')} id="showSubcommittees" className="verti-center header_link dropdownMenu">
             <span id="showSubcommittees" className={subcommitteesDropdownIcon}>
               Subcommittees
             </span>
