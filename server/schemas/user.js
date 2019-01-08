@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
-mongoose.connect('mongodb://localhost:27017/iwwdb', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_HOST, { useNewUrlParser: true });
 
 const schema = new mongoose.Schema(
   {
