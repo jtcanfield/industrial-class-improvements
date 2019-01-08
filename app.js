@@ -40,19 +40,6 @@ passport.deserializeUser(User.deserializeUser());
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/', router);
 
-app.get('/logout', (req, res) => {
-  req.logout();
-  res.redirect('/home');
-});
-app.get('/login', (req, res) => {
-  if (req.user) { return res.redirect('/home'); }
-  return res.render('login');
-});
-app.get('/register', (req, res) => {
-  if (req.user) { return res.redirect('/home'); }
-  return res.render('register');
-});
-
 app.get('*', (req, res) => {
   res.render('reactapp', {
     user: req.user ? req.user.name : '',
